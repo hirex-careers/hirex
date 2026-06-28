@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,9 +8,24 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
         <div>
-          <h2 className="text-3xl font-bold">
-            Hire<span className="text-blue-500">X</span>
-          </h2>
+          <div className="flex items-center gap-3">
+  <Image
+    src="/images/logo.png"
+    alt="HireX"
+    width={55}
+    height={55}
+  />
+
+  <div>
+    <h2 className="text-3xl font-bold">
+      Hire<span className="text-blue-500">X</span>
+    </h2>
+
+    <p className="text-gray-400 text-sm">
+      India's Smart Hiring Platform
+    </p>
+  </div>
+</div>
 
           <p className="text-gray-400 mt-4">
             Find Jobs. Get Hired. Faster.

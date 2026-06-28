@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -8,21 +9,28 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
-            H
-          </div>
 
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">
-              Hire<span className="text-blue-600">X</span>
-            </h1>
-            <p className="text-xs text-gray-500">
-              Find Jobs. Get Hired.
-            </p>
-          </div>
-        </Link>
+<Link href="/" className="flex items-center gap-3">
 
+  <Image
+    src="/images/logo.png"
+    alt="HireX Logo"
+    width={52}
+    height={52}
+    priority
+  />
+
+  <div>
+    <h1 className="text-3xl font-extrabold tracking-tight">
+      Hire<span className="text-blue-600">X</span>
+    </h1>
+
+    <p className="text-sm text-gray-500">
+      India's Smart Hiring Platform
+    </p>
+  </div>
+
+</Link>
         {/* Menu */}
         <nav className="hidden md:flex gap-8 font-medium">
           <Link href="/">Home</Link>
