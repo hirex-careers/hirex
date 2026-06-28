@@ -1,9 +1,12 @@
 import Navbar from "@/components/navbar/Navbar";
+import Hero1 from "@/components/hero/Hero1";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <Hero1 />
+
 
       <main className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
