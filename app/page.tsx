@@ -5,6 +5,8 @@ import TopCompanies from "@/components/company/TopCompanies";
 import Stats from "@/components/home/Stats";
 import Categories from "@/components/home/Categories";
 import FeaturedJobs from "@/components/jobs/FeaturedJobs";
+import Testimonials from "@/components/home/Testimonials";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -13,9 +15,11 @@ export default function Home() {
       <Hero />
       <SearchSection />
       <Stats />
-      <Categories />
       <FeaturedJobs />
+      <Categories />
       <TopCompanies />
+      <Testimonials />
+      <Footer />
 
     </>
   );
