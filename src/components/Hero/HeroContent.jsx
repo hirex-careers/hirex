@@ -7,12 +7,14 @@ function HeroContent() {
         🚀 India's Smart Hiring Platform
       </span>
 
-      <h1 className="text-white text-5xl lg:text-7xl font-bold leading-tight mt-8">
-        Get Connected
+      <h1 className="text-white text-6xl lg:text-7xl font-bold leading-tight mt-8">
+        Find Jobs.
         <br />
-        To Your Dream
+        Get Hired.
         <br />
-        Job
+        <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Faster.
+        </span>
       </h1>
 
       <p className="text-blue-100 mt-8 text-lg leading-8 max-w-xl">

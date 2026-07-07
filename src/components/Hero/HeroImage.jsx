@@ -12,7 +12,7 @@ function HeroImage() {
       <img
         src={heroPerson}
         alt="Hero"
-        className="relative w-[470px] z-10"
+        className="relative w-[720px] z-10 drop-shadow-2xl"
       />
 
       <FloatingCard />
