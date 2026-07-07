@@ -3,6 +3,8 @@ import Hero from "./components/Hero/Hero";
 import Companies from "./components/Companies/Companies";
 import Categories from "./components/Categories/Categories";
 import FeaturedJobs from "./components/FeaturedJobs/FeaturedJobs";
+import CompanySlider from "./components/CompanySlider/CompanySlider";
+import FeatureStrip from "./components/FeatureStrip/FeatureStrip";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Companies />
       <Categories />
       <FeaturedJobs />
+      <CompanySlider />
+      <FeatureStrip />
     </>
   );
 }
