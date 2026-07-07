@@ -2,7 +2,7 @@ import { FaMoon } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <nav className="w-full bg-white shadow-sm border-b border-gray-200">
+    <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
         {/* Logo */}
