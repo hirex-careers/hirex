@@ -1,39 +1,44 @@
 import CategoryCard from "./CategoryCard";
 
 const categories = [
-  { title: "Software Development", jobs: 2450, icon: "code" },
-  { title: "Data Science", jobs: 860, icon: "data" },
-  { title: "Marketing", jobs: 1200, icon: "marketing" },
-  { title: "UI/UX Design", jobs: 740, icon: "design" },
+  { title: "Software Development", jobs: "12,540", icon: "code" },
+  { title: "Data Science", jobs: "8,240", icon: "data" },
+  { title: "Marketing", jobs: "6,120", icon: "marketing" },
+  { title: "UI / UX Design", jobs: "4,580", icon: "design" },
 ];
 
 function Categories() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-gradient-to-b from-white to-slate-50">
+
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold">
+        <div className="text-center mb-16">
+
+          <span className="text-blue-600 font-semibold uppercase tracking-widest">
+            Browse Categories
+          </span>
+
+          <h2 className="mt-3 text-5xl font-bold text-gray-900">
             Popular Categories
           </h2>
 
-          <p className="text-gray-500 mt-3">
-            Explore jobs by your favourite domain.
+          <p className="mt-4 text-gray-500 text-lg">
+            Discover thousands of opportunities across top industries.
           </p>
+
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {categories.map((item) => (
-            <CategoryCard
-              key={item.title}
-              title={item.title}
-              jobs={item.jobs}
-              icon={item.icon}
-            />
+            <CategoryCard key={item.title} {...item} />
           ))}
+
         </div>
 
       </div>
+
     </section>
   );
 }
