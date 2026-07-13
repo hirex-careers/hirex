@@ -11,7 +11,7 @@ const jobs = [
     company: "Microsoft",
     title: "Frontend Developer",
     location: "Bangalore",
-    salary: "₹8-12 LPA",
+    salary: "₹8 - ₹12 LPA",
     type: "Full Time",
   },
   {
@@ -19,15 +19,7 @@ const jobs = [
     company: "Google",
     title: "Product Manager",
     location: "Hyderabad",
-    salary: "₹15-25 LPA",
-    type: "Full Time",
-  },
-  {
-    logo: swiggy,
-    company: "Swiggy",
-    title: "Business Analyst",
-    location: "Bangalore",
-    salary: "₹6-10 LPA",
+    salary: "₹18 - ₹30 LPA",
     type: "Full Time",
   },
   {
@@ -35,29 +27,49 @@ const jobs = [
     company: "Amazon",
     title: "Software Engineer",
     location: "Pune",
-    salary: "₹12-20 LPA",
-    type: "Full Time",
+    salary: "₹15 - ₹25 LPA",
+    type: "Hybrid",
+  },
+  {
+    logo: swiggy,
+    company: "Swiggy",
+    title: "Business Analyst",
+    location: "Bangalore",
+    salary: "₹8 - ₹14 LPA",
+    type: "Remote",
   },
 ];
 
 function FeaturedJobs() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-gradient-to-b from-[#F8FAFC] to-white">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="flex justify-between items-center mb-12">
+        {/* Heading */}
+        <div className="flex flex-col md:flex-row justify-between md:items-center mb-14">
 
-          <h2 className="text-4xl font-bold">
-            Featured Jobs
-          </h2>
+          <div>
+            <span className="text-blue-600 font-semibold uppercase tracking-widest">
+              Featured Opportunities
+            </span>
 
-          <button className="text-blue-600 font-semibold">
-            View All →
+            <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
+              Explore Top Jobs
+            </h2>
+
+            <p className="text-gray-500 mt-4 max-w-xl">
+              Discover exciting career opportunities from India's leading companies.
+            </p>
+          </div>
+
+          <button className="mt-6 md:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all">
+            View All Jobs →
           </button>
 
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
 
           {jobs.map((job) => (
             <JobCard key={job.company} {...job} />
