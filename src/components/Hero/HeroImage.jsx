@@ -5,16 +5,17 @@ function HeroImage() {
   return (
     <div className="relative flex justify-center items-center">
 
-      {/* Background Glow */}
-      <div className="absolute w-[520px] h-[520px] rounded-full bg-blue-400/20 blur-3xl"></div>
+      {/* Glow */}
+      <div className="absolute w-[500px] h-[500px] rounded-full bg-blue-400/20 blur-3xl"></div>
 
-      {/* Main Image */}
+      {/* Image */}
       <img
         src={heroPerson}
         alt="Hero"
-        className="relative w-[720px] z-10 drop-shadow-2xl"
+        className="relative z-10 w-[500px] lg:w-[560px] drop-shadow-2xl"
       />
 
+      {/* Floating Cards */}
       <FloatingCard />
 
     </div>
