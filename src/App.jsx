@@ -7,6 +7,9 @@ import CompanySlider from "./components/CompanySlider/CompanySlider";
 import WhyHireX from "./components/WhyHireX/WhyHireX";
 import FeatureStrip from "./components/FeatureStrip/FeatureStrip";
 import Testimonials from "./components/Testimonials/Testimonials";
+import MobileApp from "./components/MobileApp/MobileApp";
+import StatsCounter from "./components/StatsCounter/StatsCounter";
+import FAQ from "./components/FAQ/FAQ";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
       <WhyHireX />
       <FeatureStrip />
       <Testimonials />
+      <MobileApp />
+      <StatsCounter />
+      <FAQ />
     </>
   );
 }
