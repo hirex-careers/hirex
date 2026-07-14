@@ -2,41 +2,38 @@ import { FaArrowRight } from "react-icons/fa";
 
 function FeatureCard({ icon, title, description }) {
   return (
-    <div className="group relative overflow-hidden bg-white rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 p-8">
+    <div className="group relative flex h-[330px] w-full flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl sm:h-[340px] sm:p-7 lg:h-[350px] xl:p-8">
 
-      {/* Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      {/* Hover Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 opacity-0 transition duration-500 group-hover:opacity-100"></div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 flex h-full flex-col">
 
-        <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center text-white text-2xl shadow-lg">
-
+        {/* Icon */}
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-xl text-white shadow-lg sm:h-16 sm:w-16 sm:text-2xl">
           {icon}
-
         </div>
 
-        <h3 className="mt-7 text-2xl font-bold text-gray-800">
-
+        {/* Title */}
+        <h3 className="mt-6 min-h-[56px] text-xl font-bold leading-7 text-gray-800 sm:mt-7 sm:text-2xl">
           {title}
-
         </h3>
 
-        <p className="mt-4 text-gray-500 leading-7">
-
+        {/* Description */}
+        <p className="mt-3 text-sm leading-7 text-gray-500 sm:mt-4 sm:text-base">
           {description}
-
         </p>
 
-        <button className="mt-8 flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
-
+        {/* Button */}
+        <button
+          type="button"
+          className="mt-auto flex items-center gap-2 pt-6 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4"
+        >
           Learn More
-
           <FaArrowRight />
-
         </button>
 
       </div>
-
     </div>
   );
 }

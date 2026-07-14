@@ -7,22 +7,22 @@ import {
 
 const features = [
   {
-    icon: <FaBriefcase size={30} />,
+    icon: <FaBriefcase />,
     title: "Find Jobs",
     description: "Discover verified job opportunities that match your skills.",
   },
   {
-    icon: <FaShieldAlt size={30} />,
+    icon: <FaShieldAlt />,
     title: "Verified Companies",
     description: "Apply confidently to trusted companies.",
   },
   {
-    icon: <FaComments size={30} />,
+    icon: <FaComments />,
     title: "100% Response",
     description: "Receive faster responses from recruiters.",
   },
   {
-    icon: <FaUserGraduate size={30} />,
+    icon: <FaUserGraduate />,
     title: "Career Support",
     description: "Resume review, interview tips and career guidance.",
   },
@@ -30,36 +30,33 @@ const features = [
 
 function FeatureStrip() {
   return (
-    <section className="max-w-7xl mx-auto my-16">
-      <div className="bg-gradient-to-r from-[#0B1F56] to-[#1E3A8A] rounded-3xl p-10">
+    <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:pb-20">
+      <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-6 lg:px-8 xl:px-12">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="rounded-3xl bg-gradient-to-r from-[#0B1F56] via-[#15347C] to-[#1E3A8A] px-5 py-7 shadow-xl sm:px-7 sm:py-8 lg:px-9 lg:py-10">
 
-          {features.map((item, index) => (
+          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            {features.map((item) => (
+              <div
+                key={item.title}
+                className="flex items-start gap-4 text-white lg:gap-5"
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xl shadow-lg sm:h-16 sm:w-16 sm:text-2xl">
+                  {item.icon}
+                </div>
 
-            <div
-              key={index}
-              className="text-white flex gap-5 items-start"
-            >
-              <div className="w-16 h-16 rounded-full bg-blue-600 flex justify-center items-center">
-                {item.icon}
+                <div>
+                  <h3 className="text-lg font-bold sm:text-xl">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-blue-100">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-
-              <div>
-
-                <h3 className="font-bold text-xl">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-300 mt-2 text-sm leading-6">
-                  {item.description}
-                </p>
-
-              </div>
-
-            </div>
-
-          ))}
+            ))}
+          </div>
 
         </div>
 
