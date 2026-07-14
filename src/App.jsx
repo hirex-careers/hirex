@@ -10,6 +10,8 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import MobileApp from "./components/MobileApp/MobileApp";
 import StatsCounter from "./components/StatsCounter/StatsCounter";
 import FAQ from "./components/FAQ/FAQ";
+import Newsletter from "./components/Newsletter/Newsletter";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <MobileApp />
       <StatsCounter />
       <FAQ />
+      <Newsletter />
+      <Footer />
     </>
   );
 }

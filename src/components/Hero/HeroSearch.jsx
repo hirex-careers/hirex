@@ -6,101 +6,84 @@ import {
 
 function HeroSearch() {
   return (
-    <div className="mt-12 w-full max-w-[950px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-2 flex flex-col lg:flex-row items-center">
-
-      <div className="flex flex-col lg:flex-row items-center">
-
+    <div className="mx-auto w-full rounded-2xl bg-white p-2 shadow-[0_25px_70px_rgba(0,0,0,0.25)] md:rounded-3xl md:p-3">
+      <div className="flex w-full flex-col lg:flex-row lg:items-center">
         {/* Job Search */}
-        <div className="flex items-center w-full flex-1 px-5 py-4">
-
-          <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
-            <FaSearch className="text-blue-600 text-lg" />
+        <div className="flex w-full flex-1 items-center px-4 py-4 sm:px-5">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-100 sm:h-12 sm:w-12">
+            <FaSearch className="text-lg text-blue-600" />
           </div>
 
-          <div className="ml-4 w-full">
-
-            <label className="text-xs font-semibold text-gray-400 uppercase">
+          <div className="ml-3 min-w-0 flex-1 sm:ml-4">
+            <label className="block text-[10px] font-semibold uppercase tracking-wide text-gray-400 sm:text-xs">
               Job Title
             </label>
 
             <input
               type="text"
-              placeholder="Frontend Developer"
-              className="w-full mt-1 outline-none text-gray-800 font-medium"
+              placeholder="Job title, keyword or company"
+              className="mt-1 w-full bg-transparent text-sm font-medium text-gray-800 outline-none placeholder:text-gray-400 sm:text-base"
             />
-
           </div>
-
         </div>
 
         {/* Divider */}
-        <div className="hidden lg:block w-px h-16 bg-gray-200"></div>
+        <div className="mx-4 h-px bg-gray-200 lg:mx-0 lg:h-16 lg:w-px"></div>
 
         {/* Location */}
-        <div className="flex items-center w-full flex-1 px-5 py-4">
-
-          <div className="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center">
-            <FaMapMarkerAlt className="text-cyan-600 text-lg" />
+        <div className="flex w-full flex-1 items-center px-4 py-4 sm:px-5">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-100 sm:h-12 sm:w-12">
+            <FaMapMarkerAlt className="text-lg text-cyan-600" />
           </div>
 
-          <div className="ml-4 w-full">
-
-            <label className="text-xs font-semibold text-gray-400 uppercase">
+          <div className="ml-3 min-w-0 flex-1 sm:ml-4">
+            <label className="block text-[10px] font-semibold uppercase tracking-wide text-gray-400 sm:text-xs">
               Location
             </label>
 
             <input
               type="text"
-              placeholder="Bangalore"
-              className="w-full mt-1 outline-none text-gray-800 font-medium"
+              placeholder="City or remote"
+              className="mt-1 w-full bg-transparent text-sm font-medium text-gray-800 outline-none placeholder:text-gray-400 sm:text-base"
             />
-
           </div>
-
         </div>
 
         {/* Divider */}
-        <div className="hidden lg:block w-px h-16 bg-gray-200"></div>
+        <div className="mx-4 h-px bg-gray-200 lg:mx-0 lg:h-16 lg:w-px"></div>
 
         {/* Job Type */}
-        <div className="flex items-center w-full flex-1 px-5 py-4">
-
-          <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
-            <FaBriefcase className="text-purple-600 text-lg" />
+        <div className="flex w-full flex-1 items-center px-4 py-4 sm:px-5">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-100 sm:h-12 sm:w-12">
+            <FaBriefcase className="text-lg text-purple-600" />
           </div>
 
-          <div className="ml-4 w-full">
-
-            <label className="text-xs font-semibold text-gray-400 uppercase">
+          <div className="ml-3 min-w-0 flex-1 sm:ml-4">
+            <label className="block text-[10px] font-semibold uppercase tracking-wide text-gray-400 sm:text-xs">
               Job Type
             </label>
 
-            <select className="w-full mt-1 outline-none bg-transparent text-gray-800 font-medium">
-
+            <select className="mt-1 w-full bg-transparent text-sm font-medium text-gray-800 outline-none sm:text-base">
+              <option>All Job Types</option>
               <option>Full Time</option>
               <option>Part Time</option>
               <option>Remote</option>
+              <option>Hybrid</option>
               <option>Internship</option>
-
             </select>
-
           </div>
-
         </div>
 
-        {/* Button */}
-        <div className="w-full lg:w-auto px-3 py-3">
-
-          <button className="w-full lg:w-auto px-10 py-5 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white font-bold shadow-xl hover:scale-105 transition duration-300">
-
+        {/* Search Button */}
+        <div className="w-full p-2 lg:w-auto lg:min-w-[190px]">
+          <button
+            type="button"
+            className="w-full rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 px-7 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl lg:min-h-[72px] lg:rounded-2xl"
+          >
             Search Jobs
-
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 }
