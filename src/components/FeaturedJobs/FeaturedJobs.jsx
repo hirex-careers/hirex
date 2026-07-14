@@ -22,7 +22,6 @@ const jobs = [
     skills: ["React", "Next.js"],
     posted: "2 Days Ago",
   },
-
   {
     logo: google,
     company: "Google",
@@ -34,7 +33,6 @@ const jobs = [
     skills: ["Product", "Agile"],
     posted: "1 Day Ago",
   },
-
   {
     logo: amazon,
     company: "Amazon",
@@ -46,7 +44,6 @@ const jobs = [
     skills: ["Java", "AWS"],
     posted: "Today",
   },
-
   {
     logo: swiggy,
     company: "Swiggy",
@@ -58,7 +55,6 @@ const jobs = [
     skills: ["Excel", "SQL"],
     posted: "3 Days Ago",
   },
-
   {
     logo: microsoft,
     company: "Microsoft",
@@ -70,11 +66,10 @@ const jobs = [
     skills: ["Node", "MongoDB"],
     posted: "Today",
   },
-
   {
     logo: google,
     company: "Google",
-    title: "UI UX Designer",
+    title: "UI / UX Designer",
     location: "Remote",
     salary: "₹9 - ₹16 LPA",
     experience: "1-3 Years",
@@ -82,7 +77,6 @@ const jobs = [
     skills: ["Figma", "Adobe XD"],
     posted: "Today",
   },
-
   {
     logo: amazon,
     company: "Amazon",
@@ -94,37 +88,34 @@ const jobs = [
     skills: ["AWS", "Docker"],
     posted: "Yesterday",
   },
-
   {
     logo: swiggy,
     company: "Swiggy",
     title: "HR Executive",
     location: "Delhi",
-    salary: "₹5-8 LPA",
+    salary: "₹5 - ₹8 LPA",
     experience: "0-2 Years",
     type: "Full Time",
     skills: ["Hiring", "Excel"],
     posted: "Today",
   },
-
   {
     logo: microsoft,
     company: "Microsoft",
     title: "QA Engineer",
     location: "Pune",
-    salary: "₹7-11 LPA",
+    salary: "₹7 - ₹11 LPA",
     experience: "1-3 Years",
     type: "Hybrid",
     skills: ["Manual", "Automation"],
     posted: "Today",
   },
-
   {
     logo: google,
     company: "Google",
     title: "Data Analyst",
     location: "Bangalore",
-    salary: "₹12-20 LPA",
+    salary: "₹12 - ₹20 LPA",
     experience: "2-4 Years",
     type: "Full Time",
     skills: ["SQL", "Power BI"],
@@ -134,61 +125,75 @@ const jobs = [
 
 function FeaturedJobs() {
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="w-full overflow-hidden bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-6 lg:px-8 xl:px-12">
 
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="text-center mb-16">
-
-          <span className="text-blue-600 uppercase tracking-widest font-semibold">
+        {/* Heading */}
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14 lg:mb-16">
+          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 sm:text-sm">
             Latest Opportunities
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Featured Jobs
           </h2>
 
-          <p className="text-gray-500 mt-4">
-            Explore premium opportunities from India's fastest-growing companies.
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base lg:text-lg">
+            Explore premium opportunities from India&apos;s fastest-growing
+            companies.
           </p>
-
         </div>
 
+        {/* Slider */}
         <Swiper
           modules={[Autoplay]}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
           loop={true}
-          spaceBetween={25}
+          speed={900}
+          autoplay={{
+            delay: 2200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          spaceBetween={16}
           breakpoints={{
-            320: {
-              slidesPerView: 1,
+            0: {
+              slidesPerView: 1.08,
+              spaceBetween: 14,
             },
-
+            480: {
+              slidesPerView: 1.4,
+              spaceBetween: 16,
+            },
             640: {
               slidesPerView: 2,
+              spaceBetween: 18,
             },
-
+            900: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+            },
             1024: {
               slidesPerView: 3,
+              spaceBetween: 22,
             },
-
             1400: {
               slidesPerView: 4,
+              spaceBetween: 24,
             },
           }}
+          className="w-full overflow-visible"
         >
           {jobs.map((job, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={`${job.company}-${job.title}-${index}`}
+              className="h-auto"
+            >
               <JobCard {...job} />
             </SwiperSlide>
           ))}
         </Swiper>
 
       </div>
-
     </section>
   );
 }
