@@ -12,25 +12,31 @@ import StatsCounter from "./components/StatsCounter/StatsCounter";
 import FAQ from "./components/FAQ/FAQ";
 import Newsletter from "./components/Newsletter/Newsletter";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen w-full overflow-x-hidden bg-white">
       <Navbar />
-      <Hero />
-      <TrustedCompanies />
-      <Categories />
-      <FeaturedJobs />
-      <CompanySlider />
-      <WhyHireX />
-      <FeatureStrip />
-      <Testimonials />
-      <MobileApp />
-      <StatsCounter />
-      <FAQ />
-      <Newsletter />
+
+      <main className="w-full">
+        <Hero />
+        <TrustedCompanies />
+        <Categories />
+        <FeaturedJobs />
+        <CompanySlider />
+        <WhyHireX />
+        <FeatureStrip />
+        <Testimonials />
+        <MobileApp />
+        <StatsCounter />
+        <FAQ />
+        <Newsletter />
+      </main>
+
       <Footer />
-    </>
+      <ScrollToTop />
+    </div>
   );
 }
 
