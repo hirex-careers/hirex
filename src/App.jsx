@@ -1,40 +1,45 @@
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import TrustedCompanies from "./components/TrustedCompanies/TrustedCompanies";
-import Categories from "./components/Categories/Categories";
-import FeaturedJobs from "./components/FeaturedJobs/FeaturedJobs";
-import CompanySlider from "./components/CompanySlider/CompanySlider";
-import WhyHireX from "./components/WhyHireX/WhyHireX";
-import FeatureStrip from "./components/FeatureStrip/FeatureStrip";
-import Testimonials from "./components/Testimonials/Testimonials";
-import MobileApp from "./components/MobileApp/MobileApp";
-import StatsCounter from "./components/StatsCounter/StatsCounter";
-import FAQ from "./components/FAQ/FAQ";
-import Newsletter from "./components/Newsletter/Newsletter";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+
+import HomePage from "./pages/HomePage";
+import JobsPage from "./pages/JobsPage";
+import CompaniesPage from "./pages/CompaniesPage";
+import PlacementRecordPage from "./pages/PlacementRecordPage";
 
 function App() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-white">
       <Navbar />
 
-      <main className="w-full">
-        <Hero />
-        <TrustedCompanies />
-        <Categories />
-        <FeaturedJobs />
-        <CompanySlider />
-        <WhyHireX />
-        <FeatureStrip />
-        <Testimonials />
-        <MobileApp />
-        <StatsCounter />
-        <FAQ />
-        <Newsletter />
-      </main>
+      {/* Fixed Navbar Space */}
+      <div className="w-full pt-20">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
 
-      <Footer />
+          <Route path="/jobs" element={<JobsPage />} />
+
+          <Route path="/companies" element={<CompaniesPage />} />
+
+          <Route
+            path="/placement-record"
+            element={<PlacementRecordPage />}
+          />
+        </Routes>
+      </div>
+
+      <div
+        id="contact"
+        className="scroll-mt-24"
+      >
+        <Footer />
+      </div>
+
       <ScrollToTop />
     </div>
   );
